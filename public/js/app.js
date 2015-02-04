@@ -3,10 +3,12 @@
 // Declare app level module which depends on filters, and services
 
 angular.module('myApp', [
+        'ngRoute',
         'myApp.controllers',
         'myApp.filters',
         'myApp.services',
-        'myApp.directives'
+        'myApp.directives',
+        'batchModule'
     ]).
     config(function ($routeProvider, $locationProvider) {
         $routeProvider.
@@ -20,7 +22,11 @@ angular.module('myApp', [
             }).
             when('/test3', {
                 templateUrl: 'partials/test3',
-                controller: 'MyCtrl2'
+                controller: 'Test3Controller'
+            }).
+            when('/testLog', {
+                templateUrl: 'partials/testLog',
+                controller: 'TestLogController'
             }).
             otherwise({
                 redirectTo: '/view1'

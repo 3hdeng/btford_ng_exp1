@@ -1,1 +1,8 @@
 p This is the partial for test3.
+div(ng-controller="Test3Controller")
+    p Let's try this simple notify service, injected into the controller...
+    input(type="text", ng-model="message", ng-init="message='test'")
+    button.btn(ng-click="callNotify(message);") NOTIFY
+    p(you have to click 3 times to see an alert)
+
+
